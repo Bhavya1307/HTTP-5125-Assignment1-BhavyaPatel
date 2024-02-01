@@ -18,6 +18,9 @@ namespace Assignment1.Controllers
     //<param name="subTotal">Amount after appying the cost per fornight to the number of fornight</param>
     //<param name="finalHST">Amount after applying hst on the sub total</param>
     //<param name="total">Final amount after adding sub total to the final hst</param>
+    //<return>
+    //It will return the total bill for the person.
+    //</return>
     //<example>
     //GET api/HostingCost/0 => 1 fornights at $5.5/FN = $5.5 CAD HST 13% = $0.715 CAD Total = $6.215 CAD
     //</example>
@@ -42,9 +45,8 @@ namespace Assignment1.Controllers
             double finalHST = (subTotal * hst);
             double total = (subTotal + finalHST);
 
-            return $"{forNight} fornights at ${forNightCost}/FN = ${subTotal} CAD" +
-                $" HST 13% = ${finalHST} CAD" +
-                $" Total = ${total} CAD";
+            string bill = forNight + " fornights at " + forNightCost + "/FN = " + subTotal + " CAD    " + "HST 13% = " + finalHST + " CAD   " + "Total = " + total + " CAD";
+            return bill;
         }
     }
 }

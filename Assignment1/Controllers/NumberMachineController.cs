@@ -13,6 +13,10 @@ namespace Assignment1.Controllers
         //Recieves a number and will perform 4 different mathemetical operations on it.
         //</summary>
         //<param name="id">The number on which the mathemetical operations will be performed.</param>
+        //<param name="add">It will perform addition</param>
+        //<param name="sub">It will perform subtraction</param>
+        //<param name="mul">It will perform multiplication</param>
+        //<param name="div">It will perform division</param>
         //<return>
         //It will return the value after adding, subtracting, multiplying and dividing the number by 10.
         //</return>
@@ -32,10 +36,8 @@ namespace Assignment1.Controllers
             int sub = id - 10;
             int mul = id * 10;
             int div = id / 10;
-            return $" Addition = {add}" +
-                $" Subtraction = {sub}" +
-                $" Multiplication = {mul}" +
-                $" Division = {div}";
+            string math = "Addition = " + add + " Subtraction = " + sub + " Multiplication = " + mul + " Division = " + div;
+            return math;
         }
     }
 }
